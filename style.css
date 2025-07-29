@@ -1,0 +1,107 @@
+body {
+  font-family: 'Montserrat', sans-serif;  
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  margin: 0px;
+  text-align: center;
+}
+
+/* Стили для хедера */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #742c0d;
+  color: white;
+  padding: 20px 40px;
+}
+
+/* Логотип слева */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Текст рядом с логотипом */
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Ссылки навигации */
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 18px;
+}
+/* Ховер для навигации */
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Стили для текста */
+.contanier{
+display: flex;
+gap: 50px;
+}
+
+.box{
+  padding: 20px;
+  font-size: 15px;
+}
+
+/* Стили для текста внутри абзаца */
+.span_class1{
+color: #ff7e47;
+font-size: 20px;
+}
+
+.span_class2{
+color: #ff7e47;
+font-size: 20px;
+}
+
+.span_class3{
+background-color: #ff7e47;
+color: #f4f4f4;
+font-size: 20px;
+}
+
+.img{
+    float: left;
+}
+
+/* Стили на заголовков */
+h1 {
+  color: #ff7e47;
+}
+
+h2, h3, h4, h5, h6 {
+  color: #ff7e47;
+}
+
+/* Стили для кнопки */
+button {
+  padding: 10px 20px;
+  background-color: #ff7e47;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* Ховер для кнопки */
+button:hover {
+  background-color: #ff7e47;
+}
+
+/* Стили для разного текста */
+.text{
+    font-size: 20px;
+}
+
+.span_text{
+  color: #ff7e47;
+}
