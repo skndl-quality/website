@@ -35,7 +35,7 @@ function writeUsers(users) {
 // Регистрация пользователя
 app.post('/register', (req, res) => {
   const {username, email, password, telephone } = req.body;
-  if (!username || email || !password || !telephone) {
+  if (!username || !email || !password || !telephone) {
     return res.status(400).json({ error: 'Все поля обязательны' });
   }
 
