@@ -32,3 +32,19 @@ form.addEventListener('submit', async (e) => {
   alert(result.message || result.error);
 });
 
+// Загрузка файла
+const uploadForm = document.getElementById('uploadForm');
+
+uploadForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(uploadForm);
+
+  const res = await fetch('http://localhost:3000/upload', {
+    method: 'POST',
+    body: formData,
+  });
+
+  const result = await res.json();
+  alert(result.message || result.error);
+});
