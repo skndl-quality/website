@@ -6,6 +6,7 @@
   <title>Простая страница</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/imask"></script>
 </head>
 <body>
 <!-- хедер -->
@@ -63,27 +64,52 @@
 
 <hr>
 <!-- Форма регистрации -->
-<div class="Register">
-    <h1>Регистрация</h1>
-    <p>Пожалуйста введите свои данные для входа на сайт</p>
-    <hr>
-    <p>
-        <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Введите Email" name="email" required>
-    </p>
-    <p>
-        <label for="psw"><b>Пароль</b></label>
-        <input type="password" placeholder="Введите пароль" name="psw-repeat" required>
-    </p>
-    <p>    
-        <label for="telephone"><b>Номер</b></label>
-        <input type="tel"  id="telephone" placeholder="Введите номер" name="telephone" required pattern="\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}">
-    </p>
-    <p>
-        <label for="telephone"><b>Номер</b></label>
-        <input type="number" placeholder="Введите номер" name="number" required>
-    </p>    
-</div>
+<form action="#" method="post">
+  <h1>Регистрация</h1>
+  <p>Пожалуйста, введите свои данные для входа на сайт</p>
 
+  <!-- Имя -->
+  <p>
+    <label for="username"><b>Имя</b></label>
+    <br>
+    <input class="form_input" type="text" placeholder="Введите имя" name="username" id="username" required>
+  </p>
+
+  <!-- email -->
+  <p>
+    <label for="email"><b>Email</b></label>
+    <br>
+    <input class="form_input" type="email" placeholder="Введите Email" name="email" id="email" required>
+  </p>
+
+  <!-- Пароль -->
+  <p>
+    <label for="password"><b>Пароль</b></label>
+    <br>
+    <input class="form_input" type="password" placeholder="Введите пароль" name="password" id="password" 
+           required minlength="6" pattern=".{6,}">
+  </p>
+
+  <!-- Повтор пароля -->
+  <p>
+    <label for="passwordRepeat"><b>Повторите пароль</b></label>
+    <br>
+    <input class="form_input" type="password" placeholder="Повторите пароль" name="passwordRepeat" id="passwordRepeat" required>
+  </p>
+
+  <!-- Телефон -->
+  <p>
+    <label for="telephone"><b>Номер</b></label>
+    <br>
+    <input class="form_input" type="tel" placeholder="+7 (___) ___-__-__" name="telephone" id="telephone" required>
+  </p>
+
+  <!-- Кнопка -->
+  <p>
+    <button type="submit">Зарегистрироваться</button>
+  </p>
+</form>
+
+<script src="script.js"></script>
 </body>
 </html>
