@@ -8,3 +8,27 @@ const maskOptions = {
 
 // Применяем маску
 IMask(phoneInput, maskOptions);
+
+// Регистрация
+const form = document.getElementById('registerForm');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const data = {
+    username: form.username.value,
+    email: form.email.value,
+    password: form.password.value,
+    telephone: form.telephone.value,
+  };
+
+  const res = await fetch('http://localhost:3000/register', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(data),
+  });
+
+  const result = await res.json();
+  alert(result.message || result.error);
+});
+
