@@ -34,8 +34,8 @@ function writeUsers(users) {
 
 // Регистрация пользователя
 app.post('/register', (req, res) => {
-  const { email, password, telephone } = req.body;
-  if (!email || !password || !telephone) {
+  const {username, email, password, telephone } = req.body;
+  if (!username || email || !password || !telephone) {
     return res.status(400).json({ error: 'Все поля обязательны' });
   }
 
@@ -45,7 +45,7 @@ app.post('/register', (req, res) => {
     return res.status(400).json({ error: 'Пользователь с таким email уже есть' });
   }
 
-  users.push({ email, password, telephone });
+  users.push({username, email, password, telephone });
   writeUsers(users);
 
   res.json({ message: 'Пользователь зарегистрирован' });
