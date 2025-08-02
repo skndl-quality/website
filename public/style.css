@@ -11,7 +11,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #742c0d;
+  background-color: #2d2d2d;
   color: white;
   padding: 20px 40px;
 }
@@ -54,17 +54,17 @@ gap: 50px;
 
 /* Стили для текста внутри абзаца */
 .span_class1{
-color: #ff7e47;
+color: #d9a836;
 font-size: 20px;
 }
 
 .span_class2{
-color: #ff7e47;
+color: #d9a836;
 font-size: 20px;
 }
 
 .span_class3{
-background-color: #ff7e47;
+background-color: #d9a836;
 color: #f4f4f4;
 font-size: 20px;
 }
@@ -75,17 +75,17 @@ font-size: 20px;
 
 /* Стили на заголовков */
 h1 {
-  color: #ff7e47;
+  color: #d9a836;
 }
 
 h2, h3, h4, h5, h6 {
-  color: #ff7e47;
+  color: #d9a836;
 }
 
 /* Стили для кнопки */
 button {
   padding: 10px 20px;
-  background-color: #ff7e47;
+  background-color: #d9a836;
   color: white;
   border: none;
   border-radius: 12px;
@@ -94,7 +94,7 @@ button {
 
 /* Ховер для кнопки */
 button:hover {
-  background-color: #ff7e47;
+  background-color: #d9a836;
 }
 
 /* Стили для разного текста */
@@ -103,17 +103,16 @@ button:hover {
 }
 
 .span_text{
-  color: #ff7e47;
+  color: #d9a836;
 }
 
 /* инпуты */
 .form_input{
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 10px;
-  transition: 0.3s;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 270px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    transition: 0.3s;
 }
