@@ -14,6 +14,9 @@ app.use(cors());
 // Чтобы парсить JSON из тела запроса
 app.use(bodyParser.json());
 
+// Раздача статических файлов из папки public 👈 вот эта строка нужна
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Папка для загрузок
 const upload = multer({ dest: 'uploads/' });
 
@@ -34,7 +37,7 @@ function writeUsers(users) {
 
 // Регистрация пользователя
 app.post('/register', (req, res) => {
-  const {username, email, password, telephone } = req.body;
+  const { username, email, password, telephone } = req.body;
   if (!username || !email || !password || !telephone) {
     return res.status(400).json({ error: 'Все поля обязательны' });
   }
@@ -45,7 +48,7 @@ app.post('/register', (req, res) => {
     return res.status(400).json({ error: 'Пользователь с таким email уже есть' });
   }
 
-  users.push({username, email, password, telephone });
+  users.push({ username, email, password, telephone });
   writeUsers(users);
 
   res.json({ message: 'Пользователь зарегистрирован' });
